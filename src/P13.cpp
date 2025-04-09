@@ -11,5 +11,5 @@ void setup() {
 
 void loop() {
   uint16_t B =GPIOB->IDR;
-  GPIOA->BSRR =B ^ 0x23;
+  GPIOA->BSRR =B - 1u;
 }
