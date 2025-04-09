@@ -12,7 +12,7 @@ void setup() {
 
 void loop() {
   int bb = GPIOB->IDR & (1<<0);
-  if(bb){
+  if(bb==0){
     GPIOA -> BSRR |=GPIO_BSRR_BS0|GPIO_BSRR_BR1|
                    GPIO_BSRR_BS2|GPIO_BSRR_BR3|
                    GPIO_BSRR_BS4|GPIO_BSRR_BR5|
@@ -23,4 +23,4 @@ void loop() {
                    GPIO_BSRR_BR4|GPIO_BSRR_BS5|
                    GPIO_BSRR_BR6|GPIO_BSRR_BS7;
   }
-}       
+}
